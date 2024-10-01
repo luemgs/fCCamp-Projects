@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>		
+		<title>Cadastramento Invest Junior</title>
+		<link rel="icon" sizes="180x180" type="image/png" href="index.png" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Passion+One" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat?stroke=Sans+Serif" />	
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" />			
+	</head>
+	<body>
+		<div class="header-container">
+			<header>
+				<h1 id="title" class="invest-junior">Invest <span class="color-title">Junior</span></h1>
+				<p id="description">Junte-se à nós e comece sua jornada de aprendizado financeiro!</p>
+			</header>
+		</div>
+		<div class="top-image"></div>
+		<div class="wrapper">			
+			<div class="side-image"></div>
+			<div class="form">
+				<form id="survey-form" method="post" action="https://database.investjunior.com/">
+					<fieldset>
+						<legend>Identificação:</legend>
+						<label for="name" id="name-label" class="identification">Insira seu nome:
+							<input id="name" type="text" placeholder="Nome completo" required />
+						</label>
+						<!-- The type 'email' in the following input asssures that it will be correctely filled???? -->
+						<label for="email" id="email-label" class="identification">Email:
+							<!-- The pattern used bellow ensures that a valid email pattern was put by the user -->
+							<input id="email" type="email" pattern="pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Insira um email válido" required />
+						</label>					
+					</fieldset>
+					<fieldset>
+						<legend>Dados Pessoais:</legend>
+						<label class="identification">Gênero:
+							<select>
+								<option value="genero-masculinho" />Masculino</option>
+								<option value="genero-feminino"/>Feminino</option>
+								<option value="genero-outros"/>Outros</option>
+								<option value="genero-em-branco"/>Prefiro não responder</option>
+							</select>
+						</label>
+						<label for="insert-only-numbers" id="number-label"  class="identification">Idade (de 5 a 17 anos):
+							<!-- The pattern [0-9]* allows only numeric characters from 0 to 9, 
+								but doesn't prevent the user to type and send them (a JavaScript would be neeeded to do such). 
+							Without the *, only one character from 0 to 9 would be allowed. With the *, more than
+								one character from 0 to 9 is accepted, but also no characters at all, 
+							so a "riquired" attribute would be needed to avoid the field to be left blank. -->	
+							<input type="number" id="number" pattern="[0-9]*" min="5" max="17" placeholder="07" value="number">
+						</label>
+						<label class="identification">Estuda (ou concluiu o Ensino Médio) em escola da rede:
+							<label><input type="radio" name="radio" value="escola-particular" checked />Particular</label>				
+							<label><input type="radio" name="radio" value="escola-publica" />Pública</label>
+							<label><input type="radio" name="radio" value="home-schooling"/>Home Schooling</label>
+						</label>				
+					</fieldset>
+					<fieldset>
+						<legend>Como soube da Invest Junior:</legend>
+						<select id="dropdown">
+							<option value="">(Selecione um)</option>
+							<option value="1">Embachadores Invest Junior</option>	
+							<option value="2">Programa Invest Jovem</option>					
+							<option value="3">Canais ou redes sociais da Invest Junior</option>
+							<option value="4">Outros</option>				
+						</select>	
+					</fieldset>
+					<fieldset>
+						<legend>Interesses:</legend>
+						<label><input type="checkbox" value="1" />Aprender para investir no futuro</label>
+						<label><input type="checkbox" value="2" />Começar a investir</label>
+						<label><input type="checkbox" value="3" />Melhorar meus investimentos</label>	
+						<label><input type="checkbox" value="4" />Adquirir mais conhecimentos</label>
+						<label><input type="checkbox" value="5" />Incrementar meu cúrriculo ou carta de apresentação</label>
+						<label><input type="checkbox" value="5" />Ficar rico</label>
+					</fieldset>
+					<fieldset>				
+						<legend>Comentários adicionais:</legend>
+						<textarea rows="3" placeholder="Na realidade, eu sou investidor desde que eu era bebê..."></textarea></label>
+					</fieldset> 
+					<fieldset class="conclusao">
+						<legend>Conclusão</legend>
+						<label for="name" id="name-label">Cadastre uma senha de 6 dígitos:
+							<input id="name" type="text" placeholder="******" required />
+						</label>
+						<p><input type="checkbox" value="checked" /> Concordo com os <a href="https://database.investjunior.com/termos">Termos e Política de Serviço</a>.</p>					
+					</fieldset>										
+					<input type="submit" id="submit" value="Enviar" />
+				</form>
+			</div>
+		</div>
+
+		<div class="footer-container">	
+			<footer>
+				<fieldset>
+					<p><span class="bold">Invest Junior</s> | Alameda das Alamedas, 1730 - São Paulo/SP</p>
+					<p>Powered via <a href="https://www.freecodecamp.org/">FreeCodeCamp</a></p>
+				</fieldset>
+			</footer>	
+		</div>
+	</body>
+</html>
