@@ -37,7 +37,7 @@ body {
 .top-image {
 	display: none;
 	height: 150px;
-	background-image: url('top- image.jpg'); 
+	background-image: url('top-image.jpg'); 
 	background-size: cover;	
 	background-repeat: no-repeat; /* Prevent background from repeating */
 }
