@@ -26,11 +26,12 @@ body {
 }
 
 .side-image {
-	background-image: url('side-image.jpg');
-	background-size: cover;	
-	background-repeat: no-repeat; /* Prevent background from repeating */
- 	width: 215px;
-	flex: 1; /* Take up remaining space */	
+    background-image: url('side-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; /* Centraliza horizontalmente */
+    width: 215px;
+    flex: 1;
 }
 
 .top-image {
