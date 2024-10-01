@@ -1,0 +1,199 @@
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	opacity: 0.96;
+	background: rgb(122,167,185);
+	background: linear-gradient(53deg, rgba(122,167,185,1) 0%, rgba(193,121,23,1) 40%, rgba(0,212,255,1) 100%); 
+	background-size: cover;
+	background-repeat: no-repeat; /* Prevent background from repeating */
+	background-attachment: fixed; /* Optional: Keep the background fixed while scrolling */  	
+	color: rgb(0, 0, 0);
+	font-family: "Montserrat", sans-serif;
+		
+}
+
+.header-container, .wrapper,  .footer-container, .top-image {
+  display: flex;
+  margin: 0 auto;
+  width: 60%; /* Adjusted considering body as parent */
+  /* min-width: 450px; */
+  padding: 0; /* Removed unnecessary padding */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
+  font-family: "Rajdhani", sans-serif;
+  /* Add the following line */
+  justify-content: space-between;
+}
+
+.side-image {
+	background-image: url('side-image.jpg');
+	background-size: cover;	
+	background-repeat: no-repeat; /* Prevent background from repeating */
+ 	width: 215px;
+	flex: 1; /* Take up remaining space */	
+}
+
+.top-image {
+	display: none;
+	height: 150px;
+	background-image: url('top- image.jpg'); 
+	background-size: cover;	
+	background-repeat: no-repeat; /* Prevent background from repeating */
+}
+
+.form {
+  /* Flex properties are inherited from parent */
+  padding: 10px 12px; 
+  background-color: rgb(250, 250, 250);
+  /* Set a flex basis to ensure minimum width */
+  flex-basis: 450px;
+}  	
+
+header, footer {
+    margin: 0 auto;
+	padding: 0 12px;
+    width: 100%; /* Adjusted to match the width of .wrapper */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+	background-color: rgba(250, 250, 250, 0.8);
+}
+
+header {
+    padding: 30px 7px 15px 7px;
+}
+
+header h1, header p {
+	margin: 0 auto;
+	text-align: center;
+}
+
+label {
+	display: block;
+	/* margin: 0.5rem 0; */
+}
+
+fieldset {
+	/* border: none; */
+	padding: 0.5rem 7px;
+	margin: 3px 0 0 0;
+}
+
+fieldset:last-of-type {
+	padding: 0.5rem 7px 0;
+}
+
+#title {
+   	color: rgb(0, 0, 0);
+  	font-size: 36px;
+}
+
+#description {
+   	color: rgba(0, 0, 0, 0.7);
+ 	font-size: 17px;    
+}
+
+.identification {
+	padding: 0.5rem 0 0 0;
+}
+
+footer {
+	padding: 0.5em 0 0 0;
+	margin: 0 auto 15px auto;
+}
+
+footer fieldset {
+	width: 94%;
+	border: none; /* Remove all borders */
+	border-top: 2px solid rgba(0, 0, 0, 7%); /* Apply top border */
+	margin: 0 auto;
+	padding: 0 5px;
+	text-align: center;
+  	font-family: Roboto, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: rgb(30, 30, 30);
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.color-title {
+	color: #fc600d;
+}
+
+.conclusao p {
+	margin: 2px -5px 0.4em;
+}
+
+input[type="submit"] {
+	margin: 5px 0 1px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	padding: 3px 30px;
+}
+
+input[type="radio"], input[type="checkbox"], input[type=text]:focus, input[type=email]:focus, input[type=number]:focus,  textarea {
+	accent-color: #fc600d;
+}
+
+input[type=submit]:focus, input[type=submit]:hover {
+	background-color: #fc600d;
+}
+
+.invest-junior {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-family: "Passion One", sans-serif;
+	font-size: 3.3rem;
+
+}
+
+textarea {
+	width: 100%;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 850px) {
+	
+  .header-container, .wrapper,  .footer-container,  .top-image{
+  width: 80%; /* Adjusted considering body as parent */
+}
+  .form {
+    /* Set a new maximum width for the form */
+    width: 100%; /* Adjust this value as needed */
+	flex: 1;
+  }
+
+ .side-image{
+	display: none;
+	}
+	
+ .top-image {
+	display: flex;
+	background-position: center center;
+	}	
+}
+
+/* Media query for screens smaller than 456px */
+@media screen and (max-width: 456px) {
+	
+  .header-container, .wrapper,  .footer-container,  .top-image{
+  width: 100%; /* Adjusted considering body as parent */
+}
+  .form {
+    /* Set a new maximum width for the form */
+    width: 100%; /* Adjust this value as needed */
+	flex: 1;
+  }
+
+ .side-image {
+	display: none;
+	}
+	
+ .top-image{
+	display: flex;
+	background-position: center center;
+	}	
+	
+footer {
+	margin: 0 auto;
+}
+}
